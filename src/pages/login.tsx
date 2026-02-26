@@ -119,6 +119,7 @@ function RouteComponent() {
         </div>
 
         <SchemaForm
+          key={isCaptchaDisabled ? 'captcha-disabled-schema-form' : 'captcha-enabled-schema-form'}
           schema={loginFormSchema}
           uiSchema={loginUISchema}
           layout={{ layout: 'vertical', size: 'large' }}
