@@ -1,0 +1,24 @@
+/* 禁用默认动画 */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* 亮色模式下的层级 */
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 2147483646; /* 接近最大z-index值 */
+}
+
+/* 暗色模式下的层级反转 */
+.dark::view-transition-old(root) {
+  z-index: 2147483646;
+}
+
+.dark::view-transition-new(root) {
+  z-index: 1;
+}

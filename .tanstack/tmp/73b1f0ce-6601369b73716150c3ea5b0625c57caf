@@ -1,0 +1,10 @@
+import { createFileRoute } from '@tanstack/react-router';
+import { APIKeysListPage } from './-components/list';
+
+export const Route = createFileRoute('/_dashboard/api-keys/index copy')({
+  component: RouteComponent,
+});
+
+function RouteComponent() {
+  return <APIKeysListPage />;
+}
